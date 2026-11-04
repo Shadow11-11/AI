@@ -1,0 +1,46 @@
+1. Title
+Develop a Simple Chatbot using Predefined Rules and Pattern Matching.
+2. Aim
+To develop a simple rule-based chatbot using Python that interacts with users by identifying keywords and providing predefined responses.
+3. Theory
+A Chatbot is a computer program designed to communicate with users through text or voice. It understands user input and generates appropriate responses based on predefined rules or Artificial Intelligence techniques.
+
+Rule-Based Chatbot:
+
+A Rule-Based Chatbot works using predefined conditions and responses. It identifies specific keywords or patterns in the user's input and provides a suitable response.
+
+Pattern Matching:
+
+Pattern Matching is a technique used to identify specific words or phrases in user input. Based on the matched keywords, the chatbot selects an appropriate response.
+
+Working of the Chatbot:
+1. The user enters a message.
+2. The chatbot converts the input into lowercase.
+3. It checks the input for predefined keywords.
+4. If a matching keyword is found, the corresponding response is generated.
+5. If no keyword matches, a default response is displayed.
+6. The conversation continues until the user enters an exit command.
+Features:
+- Responds to greetings.
+- Answers predefined questions.
+- Identifies keywords in user input.
+- Provides default responses for unknown inputs.
+- Allows users to exit the conversation.
+Applications:
+- Customer support systems.
+- Educational assistance.
+- Information retrieval.
+- Automated messaging systems.
+4. Procedure
+1. Open Python IDLE, VS Code, or any Python IDE.
+2. Create a new Python file.
+3. Define a chatbot function that accepts user input.
+4. Convert the input into lowercase for easy keyword matching.
+5. Use if-elif-else statements to define predefined rules and responses.
+6. Include keywords related to greetings, names, AI, Python, and other topics.
+7. Display an appropriate response when a keyword matches.
+8. Provide a default response for unknown inputs.
+9. Use a while loop to continue the conversation.
+10. Stop the chatbot when the user enters "bye" or "exit".
+5. Conclusion
+Thus, we successfully developed a simple rule-based chatbot using Python and pattern matching. The chatbot identified keywords in user input and generated appropriate predefined responses. Hence, we understood the basic working of conversational systems using conditional statements and pattern matching.
