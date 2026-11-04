@@ -1,0 +1,107 @@
+# Tic-Tac-Toe using Minimax Algorithm
+
+board = [' '] * 9
+
+# Check Winner
+def check_winner():
+    wins = [
+        (0, 1, 2), (3, 4, 5), (6, 7, 8),
+        (0, 3, 6), (1, 4, 7), (2, 5, 8),
+        (0, 4, 8), (2, 4, 6)
+    ]
+
+    for a, b, c in wins:
+        if board[a] == board[b] == board[c] != ' ':
+            return board[a]
+
+    return None
+
+
+# Minimax Algorithm
+def minimax(is_max):
+    winner = check_winner()
+
+    if winner == 'X':
+        return 1
+    if winner == 'O':
+        return -1
+    if ' ' not in board:
+        return 0
+
+    if is_max:
+        best = -100
+
+        for i in range(9):
+            if board[i] == ' ':
+                board[i] = 'X'
+                best = max(best, minimax(False))
+                board[i] = ' '
+
+        return best
+
+    else:
+        best = 100
+
+        for i in range(9):
+            if board[i] == ' ':
+                board[i] = 'O'
+                best = min(best, minimax(True))
+                board[i] = ' '
+
+        return best
+
+
+# AI Best Move
+def best_move():
+    best = -100
+    move = -1
+
+    for i in range(9):
+        if board[i] == ' ':
+            board[i] = 'X'
+            score = minimax(False)
+            board[i] = ' '
+
+            if score > best:
+                best = score
+                move = i
+
+    return move
+
+
+# Print Board
+def print_board():
+    for i in range(0, 9, 3):
+        print(board[i], "|", board[i+1], "|", board[i+2])
+
+
+# Main Game
+print("Tic-Tac-Toe: AI (X) vs Human (O)")
+
+while True:
+    move = best_move()
+    board[move] = 'X'
+
+    print("\nAI Move:")
+    print_board()
+
+    if check_winner() == 'X':
+        print("AI Wins!")
+        break
+
+    if ' ' not in board:
+        print("Game Draw!")
+        break
+
+    pos = int(input("\nEnter position (1-9): ")) - 1
+
+    if pos < 0 or pos > 8 or board[pos] != ' ':
+        print("Invalid Move!")
+        continue
+
+    board[pos] = 'O'
+
+    if check_winner() == 'O':
+        print_board()
+        print("You Win!")
+        break
