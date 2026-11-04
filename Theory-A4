@@ -1,0 +1,53 @@
+1. Title
+Implement Adversarial Search with Alpha-Beta Pruning.
+2. Aim
+To implement the Adversarial Search algorithm using Alpha-Beta Pruning in Python to find the optimal move by reducing unnecessary searches in a game tree.
+3. Theory
+Adversarial Search is a search technique used in Artificial Intelligence for decision-making in competitive environments where two or more players have opposing goals.
+
+It is commonly used in games such as Chess, Tic-Tac-Toe, and Checkers.
+
+Minimax Algorithm:
+
+The Minimax algorithm is used to select the best possible move by considering two players:
+- MAX Player: Tries to maximize the score.
+- MIN Player: Tries to minimize the score.
+Alpha-Beta Pruning:
+
+Alpha-Beta Pruning is an optimization technique used with the Minimax algorithm. It reduces the number of nodes evaluated in a game tree by eliminating branches that cannot affect the final decision.
+
+It uses two parameters:
+- Alpha (α): The best value that the MAX player can guarantee.
+- Beta (β): The best value that the MIN player can guarantee.
+Pruning Condition:
+\[
+\alpha \geq \beta
+\]
+
+When this condition is satisfied, the remaining branches are skipped because they cannot influence the final result.
+
+Working of the Algorithm:
+1. Start searching from the root node of the game tree.
+2. The MAX player tries to select the maximum value.
+3. The MIN player tries to select the minimum value.
+4. Update Alpha and Beta values during searching.
+5. If Alpha becomes greater than or equal to Beta, stop exploring that branch.
+6. Return the optimal value.
+Advantages:
+- Reduces unnecessary node evaluation.
+- Improves search efficiency.
+- Saves computation time.
+- Helps find optimal decisions in competitive games.
+4. Procedure
+1. Open Python IDLE, VS Code, or any Python IDE.
+2. Create a new Python file.
+3. Define the Alpha-Beta Pruning function.
+4. Initialize Alpha to negative infinity and Beta to positive infinity.
+5. Define the game tree with different leaf node values.
+6. Implement the MAX player to select the maximum value.
+7. Implement the MIN player to select the minimum value.
+8. Update Alpha and Beta values after evaluating each child node.
+9. Apply the pruning condition to skip unnecessary branches.
+10. Execute the program and display the optimal value.
+5. Conclusion
+Thus, we successfully implemented Adversarial Search using Alpha-Beta Pruning in Python. The algorithm evaluated the game tree, selected the optimal value, and eliminated unnecessary branches to improve search efficiency.
