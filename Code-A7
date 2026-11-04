@@ -1,0 +1,79 @@
+import random
+
+# Calculate Total Distance
+def calculate_cost(route, distance):
+    cost = 0
+    n = len(route)
+
+    for i in range(n - 1):
+        cost += distance[route[i]][route[i + 1]]
+
+    cost += distance[route[-1]][route[0]]
+    return cost
+
+
+# Generate Neighboring Routes
+def generate_neighbors(route):
+    neighbors = []
+    n = len(route)
+
+    for i in range(1, n):
+        for j in range(i + 1, n):
+            new_route = route.copy()
+            new_route[i], new_route[j] = new_route[j], new_route[i]
+            neighbors.append(new_route)
+
+    return neighbors
+
+
+# Local Beam Search
+def local_beam_search(distance, k, iterations):
+    n = len(distance)
+    states = []
+
+    for _ in range(k):
+        cities = list(range(1, n))
+        random.shuffle(cities)
+        states.append([0] + cities)
+
+    for _ in range(iterations):
+        all_neighbors = []
+
+        for state in states:
+            all_neighbors.extend(generate_neighbors(state))
+
+        all_neighbors.sort(
+            key=lambda route: calculate_cost(route, distance)
+        )
+
+        states = all_neighbors[:k]
+
+    best_route = min(
+        states,
+        key=lambda route: calculate_cost(route, distance)
+    )
+
+    return best_route, calculate_cost(best_route, distance)
+
+
+# Main Program
+n = int(input("Enter number of cities: "))
+
+print("Enter distance matrix:")
+distance = []
+
+for i in range(n):
+    distance.append(list(map(int, input().split())))
+
+k = int(input("Enter beam width: "))
+iterations = int(input("Enter iterations: "))
+
+best_route, best_cost = local_beam_search(distance, k, iterations)
+
+print("\nBest Route:")
+
+for city in best_route:
+    print(chr(65 + city), end=" -> ")
+
+print(chr(65 + best_route[0]))
+print("Minimum Cost:", best_cost)
