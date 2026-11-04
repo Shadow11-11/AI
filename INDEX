@@ -1,0 +1,15 @@
+Assignment No	--Practical Title
+A1	--Design and implement a simple reflex agent for the Vacuum Cleaner world and analyze its rational behavior in a given environment
+A2	--Implement a model-based intelligent agent capable of navigating a grid environment with obstacles using internal state representation
+A3	--Implement A* Search for 8 puzzle problem
+A4	--Implement Adversarial Search with Alpha-Beta pruning
+A5	--Implement Tower of Hanoi by State Space Search
+A6	--Implement a Sudoku solver using backtracking and constraint propagation techniques
+A7	--Implement Local Beam Search for The Traveling Salesman Problem (TSP)
+B1	--Use BFS to solve a planning problem (8 puzzle / Robot path planning / Blocks world)
+B2	--Use DFS for problem solving (Water jug / Missionaries and Cannibals / Maze / Blocks world)
+B3	--Implement Backtracking search to solve the 8-Queens constraint satisfaction problem
+B4	--Develop a simple chatbot using predefined rules and pattern matching
+B5	--Design an intelligent agent that guesses a number using feedback (higher/lower)
+B6	--Implement Goal Stack Planning for solving the Blocks World problem and achieve a specified goal configuration
+B7	--Develop a game-playing agent using the Minimax algorithm for optimal decision-making
