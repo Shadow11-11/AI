@@ -1,0 +1,52 @@
+1. Title
+Develop a Game-Playing Agent using the Minimax Algorithm for Optimal Decision-Making.
+2. Aim
+To develop a game-playing agent using Python and the Minimax algorithm that selects the optimal move in a Tic-Tac-Toe game against a human player.
+3. Theory
+Minimax Algorithm is a decision-making algorithm used in Artificial Intelligence for two-player games. It helps a player select the best possible move by considering all possible future moves of both players.
+
+It is commonly used in games such as Tic-Tac-Toe, Chess, and Checkers.
+
+Working of Minimax Algorithm:
+
+The Minimax algorithm works with two players:
+- MAX Player (AI): Tries to maximize the score and find the best possible move.
+- MIN Player (Human): Tries to minimize the AI's score.
+Evaluation Function:
+
+The algorithm assigns scores based on the game outcome:
+- +1 for an AI win.
+- -1 for a human win.
+- 0 for a draw.
+Working Steps:
+1. Start with an empty Tic-Tac-Toe board.
+2. Generate all possible moves available to the AI.
+3. Evaluate each move using the Minimax algorithm.
+4. Consider the possible responses of the opponent.
+5. Select the move with the highest score for the AI.
+6. Allow the human player to make a move.
+7. Repeat until a player wins or the game ends in a draw.
+Advantages:
+- Helps select optimal moves.
+- Considers possible future game states.
+- Provides intelligent decision-making.
+- Can prevent the AI from making avoidable mistakes.
+Applications:
+- Chess and Tic-Tac-Toe games.
+- Checkers.
+- Strategic decision-making.
+- Artificial Intelligence game development.
+4. Procedure
+1. Open Python IDLE, VS Code, or any Python IDE.
+2. Create a new Python file.
+3. Initialize an empty 3×3 Tic-Tac-Toe board.
+4. Define a function to check the winner.
+5. Implement the Minimax algorithm to evaluate possible moves.
+6. Assign scores to winning, losing, and draw conditions.
+7. Define a function to select the best move for the AI.
+8. Allow the AI to play using the X symbol.
+9. Allow the human player to play using the O symbol.
+10. Repeat the process until a winner is found or the game ends in a draw.
+11. Display the final game result.
+5. Conclusion
+Thus, we successfully developed a Game-Playing Agent using the Minimax algorithm in Python. The AI evaluated possible moves and selected the optimal move while considering the opponent's responses. Hence, we understood how the Minimax algorithm helps in intelligent decision-making for two-player games.
