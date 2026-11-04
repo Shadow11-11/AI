@@ -1,0 +1,48 @@
+# Simple Reflex Agent for Vacuum Cleaner World
+
+# Initial Environment
+rooms = {
+    "A": "Dirty",
+    "B": "Dirty"
+}
+
+# Initial location
+location = "A"
+
+print("===== Initial Environment =====")
+print("Room A:", rooms["A"])
+print("Room B:", rooms["B"])
+print("Vacuum Location:", location)
+print()
+
+while True:
+
+    # Check current room
+    if rooms[location] == "Dirty":
+        print("Room", location, "is Dirty")
+        print("Action -> SUCK")
+        rooms[location] = "Clean"
+
+    # Check whether both rooms are clean
+    elif rooms["A"] == "Clean" and rooms["B"] == "Clean":
+        print("\nBoth rooms are Clean")
+        print("Action -> NO OP")
+        break
+
+    # Move to Room B
+    elif location == "A":
+        print("Room A is Clean")
+        print("Action -> Move RIGHT")
+        location = "B"
+
+    # Move to Room A
+    elif location == "B":
+        print("Room B is Clean")
+        print("Action -> Move LEFT")
+        location = "A"
+
+    print("\nCurrent State")
+    print("Room A:", rooms["A"])
+    print("Room B:", rooms["B"])
+    print("Vacuum Location:", location)
+    print("--------------------------------")
