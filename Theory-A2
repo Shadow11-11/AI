@@ -1,0 +1,46 @@
+1. Title
+Implement a Model-Based Intelligent Agent capable of navigating a grid environment with obstacles using internal state representation.
+2. Aim
+To implement a Model-Based Intelligent Agent using Python that navigates through a grid environment, avoids obstacles, and reaches the goal using an internal state representation.
+3. Theory
+An Intelligent Agent is a system that observes its environment and performs actions to achieve a specific goal.
+
+A Model-Based Agent maintains an internal representation of the environment to make decisions. Unlike a Simple Reflex Agent, it uses information about the current and previously observed states to decide its next action.
+
+Grid Environment:
+
+A grid environment consists of rows and columns in which an agent moves from a starting position to a goal position while avoiding obstacles.
+
+The following symbols are used:
+- S – Starting Position
+- G – Goal Position
+- # – Obstacle
+- . – Empty Cell
+- A – Agent's Current Position
+Working of the Agent:
+1. The agent starts from a predefined position.
+2. It maintains an internal representation of the grid.
+3. It checks the possible movements in four directions: UP, DOWN, LEFT, and RIGHT.
+4. It avoids obstacles and previously visited positions.
+5. It continues navigating until it reaches the goal.
+Internal State Representation:
+
+The agent stores information about the grid, its current position, obstacles, and visited positions. This information helps it make decisions and avoid unnecessary movements.
+
+Rational Behavior:
+
+The agent behaves rationally by selecting valid movements, avoiding obstacles, and finding a path towards the goal.
+4. Procedure
+1. Open Python IDLE, VS Code, or any Python IDE.
+2. Create a new Python file.
+3. Define a grid environment using a two-dimensional list.
+4. Mark the starting position, goal position, and obstacles.
+5. Initialize the agent's current position and visited positions.
+6. Define the possible movements in four directions.
+7. Check whether the next position is within the grid boundaries.
+8. Avoid cells containing obstacles and previously visited positions.
+9. Move the agent to a valid position using the navigation function.
+10. Repeat the process until the goal is reached or no valid path is available.
+11. Display the final result.
+5. Conclusion
+Thus, we successfully implemented a Model-Based Intelligent Agent using Python to navigate through a grid environment containing obstacles. The agent maintained an internal state representation, avoided obstacles, and successfully navigated towards the goal using valid movements.
