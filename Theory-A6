@@ -1,0 +1,46 @@
+1. Title
+Implement a Sudoku Solver using Backtracking and Constraint Propagation Techniques.
+2. Aim
+To implement a Sudoku Solver using Python by applying Backtracking and Constraint Propagation techniques to fill the empty cells while satisfying all Sudoku rules.
+3. Theory
+Sudoku is a number-placement puzzle consisting of a 9×9 grid divided into nine smaller 3×3 subgrids. The objective is to fill all empty cells with numbers from 1 to 9 while following specific rules.
+
+Rules of Sudoku:
+1. Each row must contain numbers from 1 to 9 without repetition.
+2. Each column must contain numbers from 1 to 9 without repetition.
+3. Each 3×3 subgrid must contain numbers from 1 to 9 without repetition.
+Backtracking Technique:
+
+Backtracking is a problem-solving technique that tries different possible solutions step by step. If a selected number leads to an invalid solution, the algorithm goes back and tries another number.
+
+Constraint Propagation:
+
+Constraint Propagation reduces the possible choices for empty cells by applying Sudoku rules. If an empty cell has only one possible valid number, that number is placed automatically.
+
+Working of the Algorithm:
+1. Initialize the Sudoku grid with some empty cells represented by 0.
+2. Check the possible numbers for each empty cell.
+3. Apply constraint propagation to fill cells having only one possible number.
+4. If empty cells remain, apply backtracking.
+5. Try numbers from 1 to 9 in an empty cell.
+6. Check whether the selected number satisfies Sudoku rules.
+7. If a solution is invalid, backtrack and try another number.
+8. Continue until the entire Sudoku grid is solved.
+Applications:
+- Artificial Intelligence problem-solving.
+- Puzzle solving.
+- Constraint Satisfaction Problems (CSP).
+- Decision-making and logical reasoning.
+4. Procedure
+1. Open Python IDLE, VS Code, or any Python IDE.
+2. Create a new Python file.
+3. Initialize a 9×9 Sudoku grid with empty cells represented by 0.
+4. Define a function to check whether a number can be placed in a particular cell.
+5. Check the corresponding row, column, and 3×3 subgrid.
+6. Implement Constraint Propagation to fill cells having only one possible value.
+7. Implement the Backtracking algorithm to try different possible numbers.
+8. If a number creates an invalid solution, return to the previous step and try another number.
+9. Repeat the process until all empty cells are filled.
+10. Display the solved Sudoku grid.
+5. Conclusion
+Thus, we successfully implemented a Sudoku Solver using Backtracking and Constraint Propagation techniques in Python. The program checked the Sudoku constraints, reduced possible choices, and filled the empty cells to obtain a valid solution.
