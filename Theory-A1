@@ -1,0 +1,42 @@
+1. Title
+Design and implement a Simple Reflex Agent for the Vacuum Cleaner World and analyze its rational behavior in a given environment.
+2. Aim
+To design and implement a Simple Reflex Agent for the Vacuum Cleaner World using Python and analyze its rational behavior based on the condition of the rooms.
+3. Theory
+An Intelligent Agent is a system that perceives its environment and performs actions to achieve a specific goal.
+
+A Simple Reflex Agent selects actions based only on the current condition of the environment. It follows predefined condition-action rules and does not consider past experiences.
+
+Vacuum Cleaner World:
+
+The Vacuum Cleaner World consists of two rooms, A and B. Each room can be either Clean or Dirty. The vacuum cleaner moves between these rooms and cleans them whenever required.
+
+Working of the Agent:
+
+The agent follows these condition-action rules:
+1. If the current room is Dirty, perform the SUCK action.
+2. If Room A is Clean, move RIGHT towards Room B.
+3. If Room B is Clean, move LEFT towards Room A.
+4. If both rooms are Clean, perform NO OP (No Operation).
+Components of the Agent:
+- Agent: Vacuum Cleaner
+- Environment: Two rooms (A and B)
+- Percept: Current location and room condition
+- Actions: SUCK, LEFT, RIGHT and NO OP
+- Goal: To make both rooms clean.
+Rational Behavior:
+
+An agent is considered rational when it selects actions that help achieve its goal. In this practical, the vacuum cleaner behaves rationally by cleaning dirty rooms and stopping when both rooms are clean.
+4. Procedure
+1. Open Python IDLE or any Python IDE.
+2. Create a new Python file.
+3. Initialize two rooms, A and B, with the status Dirty.
+4. Set the initial location of the vacuum cleaner to Room A.
+5. Display the initial environment and vacuum cleaner location.
+6. Use a while loop to continuously check the current room condition.
+7. If the current room is Dirty, perform the SUCK action.
+8. If the current room is Clean, move to the other room.
+9. Check whether both rooms are Clean. If yes, perform NO OP and terminate the loop.
+10. Display the updated environment after every action.
+5. Conclusion
+Thus, we successfully designed and implemented a Simple Reflex Agent for the Vacuum Cleaner World using Python. The agent followed predefined condition-action rules to clean both rooms and stopped when the goal was achieved. Hence, we understood the working and rational behavior of a Simple Reflex Agent.
