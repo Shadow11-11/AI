@@ -1,0 +1,49 @@
+1. Title
+Design an Intelligent Agent that Guesses a Number using Higher/Lower Feedback.
+2. Aim
+To design and implement an Intelligent Agent using Python that guesses a number between 1 and 100 based on user feedback such as Higher, Lower, or Correct.
+3. Theory
+An Intelligent Agent is a system that observes its environment, processes information, and performs actions to achieve a specific goal.
+
+In this practical, the agent tries to guess a number selected by the user. It uses feedback provided by the user to improve its next guess.
+
+Number Guessing Agent:
+
+The agent uses the Binary Search technique to guess the correct number efficiently. Instead of checking every number, it selects the middle number of the current range.
+
+Working of the Agent:
+1. Initialize the number range from 1 to 100.
+2. Calculate the middle value of the range.
+3. Display the guessed number to the user.
+4. Ask the user for feedback.
+5. If the feedback is Higher, search in the upper half.
+6. If the feedback is Lower, search in the lower half.
+7. If the feedback is Correct, stop the program.
+8. Repeat until the correct number is guessed.
+Feedback Conditions:
+- Higher: The actual number is greater than the guessed number.
+- Lower: The actual number is smaller than the guessed number.
+- Correct: The agent has guessed the correct number.
+Advantages:
+- Reduces the number of guesses.
+- Uses feedback to improve decisions.
+- Demonstrates intelligent decision-making.
+- Efficiently searches a given number range.
+Applications:
+- Number guessing games.
+- Search algorithms.
+- Decision-making systems.
+- Interactive intelligent systems.
+4. Procedure
+1. Open Python IDLE, VS Code, or any Python IDE.
+2. Create a new Python file.
+3. Initialize the lower limit as 1 and upper limit as 100.
+4. Calculate the middle value using the Binary Search technique.
+5. Display the guessed number.
+6. Ask the user to enter feedback as Higher, Lower, or Correct.
+7. If the feedback is Higher, update the lower limit.
+8. If the feedback is Lower, update the upper limit.
+9. If the feedback is Correct, display a success message.
+10. Repeat the process until the correct number is guessed.
+5. Conclusion
+Thus, we successfully designed and implemented an Intelligent Number Guessing Agent using Python. The agent used the Binary Search technique and user feedback to adjust its guesses and identify the correct number efficiently. Hence, we understood how an intelligent agent uses feedback to improve its decision-making process.
