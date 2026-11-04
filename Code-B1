@@ -1,0 +1,80 @@
+from collections import deque
+
+# Goal State
+goal = (
+    (1, 2, 3),
+    (4, 5, 6),
+    (7, 8, 0)
+)
+
+# Find Blank Tile
+def find_blank(state):
+    for i in range(3):
+        for j in range(3):
+            if state[i][j] == 0:
+                return i, j
+
+
+# Generate Neighbor States
+def get_neighbors(state):
+    row, col = find_blank(state)
+
+    directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    neighbors = []
+
+    for dr, dc in directions:
+        nr, nc = row + dr, col + dc
+
+        if 0 <= nr < 3 and 0 <= nc < 3:
+            temp = [list(r) for r in state]
+            temp[row][col], temp[nr][nc] = temp[nr][nc], temp[row][col]
+
+            neighbors.append(tuple(tuple(r) for r in temp))
+
+    return neighbors
+
+
+# Print Puzzle
+def print_state(state):
+    for row in state:
+        print(row)
+    print()
+
+
+# BFS Algorithm
+def bfs(start):
+    queue = deque([(start, [start])])
+    visited = {start}
+
+    while queue:
+        current, path = queue.popleft()
+
+        if current == goal:
+            print("Goal State Reached!")
+            print("Total Moves:", len(path) - 1)
+            print("\nSolution Path:")
+
+            for state in path:
+                print_state(state)
+
+            return
+
+        for neighbor in get_neighbors(current):
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append((neighbor, path + [neighbor]))
+
+    print("No Solution Found")
+
+
+# Initial State
+start = (
+    (1, 2, 3),
+    (4, 0, 6),
+    (7, 5, 8)
+)
+
+print("Initial State:")
+print_state(start)
+
+bfs(start)
