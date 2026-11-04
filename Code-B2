@@ -1,0 +1,67 @@
+# DFS for Water Jug Problem
+
+def dfs(state, visited, path):
+    a, b = state
+
+    # Goal State
+    if a == 2:
+        print("\nSolution Found:")
+        for step in path:
+            print(step)
+        return True
+
+    # Avoid Repeated States
+    if state in visited:
+        return False
+
+    visited.add(state)
+
+    # Generate Possible Moves
+    moves = []
+
+    # 1. Fill Jug A
+    moves.append(((4, b), "Fill Jug A"))
+
+    # 2. Fill Jug B
+    moves.append(((a, 3), "Fill Jug B"))
+
+    # 3. Empty Jug A
+    moves.append(((0, b), "Empty Jug A"))
+
+    # 4. Empty Jug B
+    moves.append(((a, 0), "Empty Jug B"))
+
+    # 5. Pour Jug A into Jug B
+    transfer = min(a, 3 - b)
+    moves.append(((a - transfer, b + transfer),
+                  "Pour Jug A into Jug B"))
+
+    # 6. Pour Jug B into Jug A
+    transfer = min(b, 4 - a)
+    moves.append(((a + transfer, b - transfer),
+                  "Pour Jug B into Jug A"))
+
+    # DFS
+    for new_state, action in moves:
+        if new_state not in visited:
+            path.append(action + " -> " + str(new_state))
+
+            if dfs(new_state, visited, path):
+                return True
+
+            path.pop()
+
+    return False
+
+
+# Initial State
+initial_state = (0, 0)
+
+# Visited States
+visited = set()
+
+# Solution Path
+path = ["Initial State -> (0, 0)"]
+
+# Start DFS
+dfs(initial_state, visited, path)
