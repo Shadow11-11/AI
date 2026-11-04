@@ -1,0 +1,61 @@
+# Goal Stack Planning for Blocks World
+
+# Initial State
+blocks = {
+    'A': 'Table',
+    'B': 'Table',
+    'C': 'Table'
+}
+
+# Goal Stack
+goal_stack = [
+    ('On', 'A', 'B'),
+    ('On', 'B', 'C')
+]
+
+# Find Block on Top
+def find_top(block):
+    for b in blocks:
+        if blocks[b] == block:
+            return b
+    return None
+
+
+# Move Block to Table
+def move_to_table(block):
+    top = find_top(block)
+
+    if top:
+        move_to_table(top)
+
+    blocks[block] = 'Table'
+    print("Move", block, "to Table")
+
+
+# Move Block onto Another Block
+def move(block, destination):
+    top = find_top(block)
+
+    if top:
+        move_to_table(top)
+
+    top = find_top(destination)
+
+    if top:
+        move_to_table(top)
+
+    blocks[block] = destination
+    print("Move", block, "onto", destination)
+
+
+# Goal Stack Planning
+while goal_stack:
+    goal = goal_stack.pop()
+
+    if goal[0] == 'On':
+        move(goal[1], goal[2])
+
+print("\nFinal State:")
+print(blocks)
+
+print("Goal Achieved!")
