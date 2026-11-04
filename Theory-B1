@@ -1,0 +1,47 @@
+1. Title
+Use Breadth First Search (BFS) to solve the 8-Puzzle Planning Problem.
+2. Aim
+To implement the Breadth First Search (BFS) algorithm using Python to solve the 8-Puzzle Problem by finding a sequence of moves from the initial state to the goal state.
+3. Theory
+Breadth First Search (BFS) is an uninformed search algorithm used in Artificial Intelligence to explore states level by level. It uses a queue data structure that follows the FIFO (First In, First Out) principle.
+
+8-Puzzle Problem:
+
+The 8-Puzzle Problem consists of a 3×3 grid containing eight numbered tiles and one blank space represented by 0. The objective is to arrange the tiles in the correct order by moving the blank space.
+
+Rules of the 8-Puzzle:
+1. The blank tile can move UP, DOWN, LEFT, or RIGHT.
+2. Only one tile can be moved at a time.
+3. The movement must remain within the grid boundaries.
+4. The objective is to reach the predefined goal state.
+Working of BFS:
+1. Start with the initial puzzle state.
+2. Insert the initial state into the queue.
+3. Remove the first state from the queue.
+4. Check whether the current state matches the goal state.
+5. Generate all possible neighboring states.
+6. Add unvisited neighboring states to the queue.
+7. Repeat until the goal state is reached or the queue becomes empty.
+Important Terms:
+- Initial State: Starting arrangement of puzzle tiles.
+- Goal State: Required final arrangement of tiles.
+- Queue: Stores states waiting to be explored.
+- Visited Set: Stores already explored states to avoid repetition.
+Advantages:
+- Explores states systematically.
+- Finds the shortest path when all moves have equal cost.
+- Avoids repeated exploration using a visited set.
+4. Procedure
+1. Open Python IDLE, VS Code, or any Python IDE.
+2. Create a new Python file.
+3. Import the deque module from the collections library.
+4. Define the initial state and goal state of the puzzle.
+5. Create a function to locate the blank tile (0).
+6. Generate neighboring states by moving the blank tile in four directions.
+7. Initialize a queue with the initial state.
+8. Maintain a visited set to avoid repeated states.
+9. Apply BFS to explore the possible states level by level.
+10. Continue until the goal state is reached.
+11. Display the solution path and total number of moves.
+5. Conclusion
+Thus, we successfully implemented the Breadth First Search algorithm to solve the 8-Puzzle Problem using Python. The algorithm explored different puzzle states using a queue and found the shortest solution path from the initial state to the goal state.
