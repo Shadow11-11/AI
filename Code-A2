@@ -1,0 +1,42 @@
+# Model-Based Agent for Grid Navigation
+
+grid = [
+    ['S', '.', '#', '.'],
+    ['.', '.', '#', '.'],
+    ['#', '.', '.', '.'],
+    ['.', '.', '#', 'G']
+]
+
+position = (0, 0)
+visited = set()
+
+# Internal state representation
+directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+
+def navigate(position):
+    if position == (3, 3):
+        return True
+
+    visited.add(position)
+    r, c = position
+
+    for dr, dc in directions:
+        nr, nc = r + dr, c + dc
+
+        if (0 <= nr < 4 and 0 <= nc < 4 and
+            grid[nr][nc] != '#' and
+            (nr, nc) not in visited):
+
+            print("Moving to:", (nr, nc))
+
+            if navigate((nr, nc)):
+                return True
+
+    return False
+
+print("Starting Position:", position)
+
+if navigate(position):
+    print("Goal Reached!")
+else:
+    print("Goal Not Found!")
