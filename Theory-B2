@@ -1,0 +1,54 @@
+1. Title
+Use Depth First Search (DFS) for Problem Solving – Water Jug Problem.
+2. Aim
+To implement the Depth First Search (DFS) algorithm using Python to solve the Water Jug Problem and obtain exactly 2 litres of water in a 4-litre jug using a 3-litre jug.
+3. Theory
+Depth First Search (DFS) is an uninformed search algorithm used in Artificial Intelligence to explore a search space by going as deep as possible along one path before backtracking.
+
+It uses a stack (Last In, First Out) principle or recursion to explore different states.
+
+Water Jug Problem:
+
+The Water Jug Problem is a classical AI problem-solving example involving two jugs of different capacities. The objective is to measure a specific quantity of water using the available jugs.
+
+In this practical:
+- Jug A has a capacity of 4 litres.
+- Jug B has a capacity of 3 litres.
+- Initial state is (0, 0).
+- Goal is to obtain exactly 2 litres in Jug A.
+Possible Operations:
+1. Fill Jug A.
+2. Fill Jug B.
+3. Empty Jug A.
+4. Empty Jug B.
+5. Pour water from Jug A into Jug B.
+6. Pour water from Jug B into Jug A.
+State Space Representation:
+
+A state is represented as (A, B), where A represents the amount of water in the 4-litre jug and B represents the amount of water in the 3-litre jug.
+
+Working of DFS:
+1. Start from the initial state (0, 0).
+2. Generate all possible operations.
+3. Explore an unvisited state.
+4. Continue exploring deeper states.
+5. If the goal is not reached, backtrack and try another path.
+6. Stop when exactly 2 litres are obtained in Jug A.
+Applications:
+- Puzzle solving.
+- Maze solving.
+- Pathfinding.
+- Artificial Intelligence problem-solving.
+4. Procedure
+1. Open Python IDLE, VS Code, or any Python IDE.
+2. Create a new Python file.
+3. Define a DFS function with state, visited set, and path.
+4. Initialize both jugs with 0 litres of water.
+5. Set the goal condition as 2 litres in Jug A.
+6. Generate all possible operations such as filling, emptying, and pouring water.
+7. Maintain a visited set to avoid repeated states.
+8. Apply DFS to explore possible states recursively.
+9. If the goal is not reached, backtrack and explore another possible state.
+10. Display the solution path when the goal is achieved.
+5. Conclusion
+Thus, we successfully implemented the Water Jug Problem using the Depth First Search algorithm in Python. The algorithm explored different possible states through filling, emptying, and transferring water between the jugs. Finally, we successfully obtained exactly 2 litres of water in the 4-litre jug using the 3-litre jug.
